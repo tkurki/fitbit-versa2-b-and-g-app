@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@fitbit/sdk": "~4.3.0",
+    "@fitbit/sdk-cli": "^1.7.3"
+  },
+  "fitbit": {
+    "appUUID": "8ba3e490-7aff-4250-9d66-3847a131a339",
+    "appType": "app",
+    "appDisplayName": "sk-cassiopeia-versa2",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_internet"
+    ],
+    "buildTargets": [
+      "mira"
+    ],
+    "i18n": {
+      "en-US": {
+        "name": "sk-cassiopeia-versa2"
+      }
+    },
+    "defaultLanguage": "en-US",
+    "devDependencies": {
+      "@fitbit/sdk": "~6.0.0",
+      "@fitbit/sdk-cli": "^1.7.3"
+    }
+  },
+  "scripts": {
+    "build": "fitbit-build"
+  }
+}
