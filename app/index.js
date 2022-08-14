@@ -2,15 +2,28 @@ import document from "document";
 
 console.log("App code started");
 
-let count = 0
-
-let button = document.getElementById("button");
 let status = document.getElementById("status")
-button.onactivate = function(evt) {
-  button.text = "Clicked " + ++count;
-  status.text = "--"
-  sendMessage({cmd: 'CLEAR_CURSOR'})
-}
+
+let buttons = [
+  {
+    id: 'clearButton',
+    cmd: 'CLEAR_CURSOR'
+  },
+  {
+    id: 'minusButton',
+    cmd: 'ZOOM_OUT'
+  },
+  {
+    id: 'plusButton',
+    cmd: 'ZOOM_IN'
+  }
+]
+buttons.forEach((buttonData) => {
+  document.getElementById(buttonData.id)
+  .onactivate = function(evt) {
+    sendMessage({cmd: buttonData.cmd})
+  }  
+})
 
 import * as messaging from "messaging";
 
